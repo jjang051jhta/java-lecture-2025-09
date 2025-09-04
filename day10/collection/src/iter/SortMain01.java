@@ -7,7 +7,7 @@ public class SortMain01 {
         Integer [] array = {7,9,4,3,5,2,1};
         System.out.println(Arrays.toString(array));
         System.out.println("기본정렬");
-        Arrays.sort(array,new DescComparator());
+        Arrays.sort(array);
         System.out.println(Arrays.toString(array));
     }
 }

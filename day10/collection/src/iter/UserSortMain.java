@@ -12,5 +12,8 @@ public class UserSortMain {
         System.out.println(Arrays.toString(users));
         Arrays.sort(users);
         System.out.println(Arrays.toString(users));
+        System.out.println("Id정렬");
+        Arrays.sort(users,new IdComparator().reversed());
+        System.out.println(Arrays.toString(users));
     }
 }
