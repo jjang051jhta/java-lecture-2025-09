@@ -1,4 +1,4 @@
-package network03;
+package network04;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -6,7 +6,7 @@ import java.net.Socket;
 
 import static utils.MyLogger.log;
 
-public class Server03 {
+public class Server04 {
     private static final int PORT = 12346;
     public static void main(String[] args) throws IOException {
         log("서버 시작");
@@ -15,8 +15,8 @@ public class Server03 {
         while(true) {
             Socket socket = serverSocket.accept();
             log("소켓 연결 : "+socket);
-            Session03 session03 = new Session03(socket);
-            Thread thread = new Thread(session03);
+            Session04 session04 = new Session04(socket);
+            Thread thread = new Thread(session04);
             thread.start();
         }
     }

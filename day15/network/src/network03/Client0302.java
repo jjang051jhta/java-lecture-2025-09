@@ -29,11 +29,7 @@ public class Client0302 {
             String received = dataInputStream.readUTF();
             log("clinet  <=== server : "+received);
         }
-
-
-
         //서버에서 넘어오 데이터 받기
-
         dataInputStream.close();
         dataOutputStream.close();
         socket.close();
