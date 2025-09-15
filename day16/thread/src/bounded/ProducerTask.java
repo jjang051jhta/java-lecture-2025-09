@@ -16,4 +16,5 @@ public class ProducerTask implements Runnable {
         queue.put(request);
         log("[생산 완료] "+request+" -> "+queue);
     }
+
 }

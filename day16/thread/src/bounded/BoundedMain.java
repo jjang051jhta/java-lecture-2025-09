@@ -7,6 +7,8 @@ import static utils.ThreadUtil.sleep;
 public class BoundedMain {
     public static void main(String[] args) {
         BoundedQueue queue = new BoundedQueue01(2); //최대 2개 생산가능
+        producerFirst(queue);
+        //consumerFirst(queue);
 
     }
     private static void producerFirst(BoundedQueue queue) {
@@ -30,7 +32,7 @@ public class BoundedMain {
 
     }
     private static void startProducer(BoundedQueue queue,List<Thread> threads) {
-        System.out.println("생산자 시작");
+        System.out.println("");
         log("생산자 시작");
         for(int i=1;i<=3;i++){
             Thread producer = new Thread(new ProducerTask(queue,"data"+i),"producer"+i);

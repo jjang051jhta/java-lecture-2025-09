@@ -25,4 +25,9 @@ public class BoundedQueue01 implements BoundedQueue{
         }
         return queue.poll();
     }
+
+    @Override
+    public String toString() {
+        return queue.toString();
+    }
 }
