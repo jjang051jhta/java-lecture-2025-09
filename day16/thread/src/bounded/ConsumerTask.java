@@ -4,7 +4,7 @@ import static utils.MyLogger.log;
 public class ConsumerTask implements Runnable {
     private BoundedQueue queue;
 
-    public ConsumerTask(BoundedQueue queue, String request) {
+    public ConsumerTask(BoundedQueue queue) {
         this.queue = queue;
     }
 
