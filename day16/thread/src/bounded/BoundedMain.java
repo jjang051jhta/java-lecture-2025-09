@@ -9,7 +9,11 @@ public class BoundedMain {
         //BoundedQueue queue = new BoundedQueue01(2); //최대 2개 생산가능
         //BoundedQueue queue = new BoundedQueue02(2); //최대 2개 생산가능
         //BoundedQueue queue = new BoundedQueue03(2); //최대 2개 생산가능
-        BoundedQueue queue = new BoundedQueue04(2); //최대 2개 생산가능
+        //BoundedQueue queue = new BoundedQueue04(2); //최대 2개 생산가능
+        //BoundedQueue queue = new BoundedQueue05(2); //최대 2개 생산가능
+        //BoundedQueue queue = new BoundedQueue06(2); //최대 2개 생산가능
+        //BoundedQueue queue = new BoundedQueue07(2); //최대 2개 생산가능
+        BoundedQueue queue = new BoundedQueue08(2); //최대 2개 생산가능
         producerFirst(queue);
         //consumerFirst(queue);
         //wait() 락을 반납하고 대기상태로 들어가기, notify() 대기중인 스레드를 꺠운다.

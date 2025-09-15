@@ -60,6 +60,8 @@ public class BoundedQueue05 implements BoundedQueue{
             lock.unlock();
         }
     }
+    //자바 진영에서 만들어 논거 있음.
+    // BlockingQueue 스레드 관점에서 보면 큐가 특정 조건이 만족될떄까지 스레드 작업을 차단
 
     @Override
     public String toString() {
