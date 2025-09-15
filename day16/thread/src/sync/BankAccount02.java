@@ -11,7 +11,7 @@ public class BankAccount02 implements BankAccount {
     }
 
     @Override
-    public boolean withdraw(int amount) {
+    public synchronized boolean withdraw(int amount) {
         log("거래 시작 : "+getClass().getSimpleName()); // 이름 출력 BankAccount01
         log("[검증 시작] 출금액 : "+amount+" , 잔액 : "+balance);
         if(balance<amount) {
@@ -27,7 +27,7 @@ public class BankAccount02 implements BankAccount {
     }
 
     @Override
-    public int getBalance() {
+    public synchronized int getBalance() {
         return balance;
     }
 }
