@@ -9,6 +9,15 @@ public class BankAccount01 implements BankAccount {
     public BankAccount01(int balance) {
         this.balance = balance;
     }
+    //동시성 문제는 자주 면접에 나온다.
+    //생산자 소비자 문제 자주 물어봄
+    // 식당
+    // 주방장 요리  데크(버퍼) [ 1, 2, 3 ]
+    // 소비자 음식을 가져간다. [ 1, 2, 3 ]
+    // 공장에서 물건을 만든다  창고(버퍼) [1,2,3] 에 물건이 가득차면 공장은 놀아야 한다.
+    // 소매상은 창고에서 물건을 들고온다.   창고 [] 에 물건이 가득찰때까지 놀아야 한다.
+    // producer - consumer problem
+    // bounded - buffer problem
 
     @Override
     public boolean withdraw(int amount) {

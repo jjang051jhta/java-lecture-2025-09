@@ -49,7 +49,7 @@ public class BankAccount06 implements BankAccount {
     }
 
     @Override
-    public synchronized int getBalance() {
+    public int getBalance() {
         lock.lock();
         try {
             return balance;
