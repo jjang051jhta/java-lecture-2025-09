@@ -6,10 +6,14 @@ import static utils.MyLogger.log;
 import static utils.ThreadUtil.sleep;
 public class BoundedMain {
     public static void main(String[] args) {
-        BoundedQueue queue = new BoundedQueue01(2); //최대 2개 생산가능
+        //BoundedQueue queue = new BoundedQueue01(2); //최대 2개 생산가능
+        //BoundedQueue queue = new BoundedQueue02(2); //최대 2개 생산가능
+        //BoundedQueue queue = new BoundedQueue03(2); //최대 2개 생산가능
+        BoundedQueue queue = new BoundedQueue04(2); //최대 2개 생산가능
         producerFirst(queue);
         //consumerFirst(queue);
-
+        //wait() 락을 반납하고 대기상태로 들어가기, notify() 대기중인 스레드를 꺠운다.
+        //notifyAll() 대기중인 스레드 싹다 꺠우기....
     }
     private static void producerFirst(BoundedQueue queue) {
         log("== [생산자 먼저 실행] 시작, " + queue.getClass().getSimpleName() + " ==");
