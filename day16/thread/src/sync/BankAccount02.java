@@ -12,7 +12,9 @@ public class BankAccount02 implements BankAccount {
 
     @Override
     public synchronized boolean withdraw(int amount) {
-        log("거래 시작 : "+getClass().getSimpleName()); // 이름 출력 BankAccount01
+        log("거래 시작 : "+getClass().getSimpleName()); // 이름 출력 BankAccount01  여기는 임계 영역은 아니다.
+
+        //여기서 임계영역 시작
         log("[검증 시작] 출금액 : "+amount+" , 잔액 : "+balance);
         if(balance<amount) {
             log("[검증 실패] 출금액 : "+amount+" , 잔액 : "+balance);
@@ -22,6 +24,8 @@ public class BankAccount02 implements BankAccount {
         sleep(1000);
         balance -= amount;
         log("[출금 완료] 출금액 : "+amount+" , 잔액 : "+balance);
+        //임계영역 끝
+
         log("[거래 완료]");
         return true;
     }
