@@ -1,11 +1,11 @@
-package chatting.client;
+package chatting.server;
 
 import java.io.IOException;
 
-public class ClientMain {
+public class ServerMain {
     private static final int PORT = 12345;
     public static void main(String[] args) throws IOException {
-        Client client = new Client("localhost",PORT);
-        client.start();
+        Server server = new Server(PORT);
+        server.start();
     }
 }
