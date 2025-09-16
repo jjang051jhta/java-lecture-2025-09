@@ -1,4 +1,6 @@
-package start;
+package lamda.start;
+
+import lamda.Procedure;
 
 import java.util.Random;
 
@@ -20,7 +22,7 @@ public class Ex02Main {
         long endNs = System.nanoTime();
         System.out.println("실행 시간 : "+(endNs-startNs)+"ns");
     }
-    static class Dice implements Procedure  {
+    static class Dice implements Procedure {
 
         @Override
         public void run() {

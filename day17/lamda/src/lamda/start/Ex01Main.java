@@ -1,4 +1,4 @@
-package start;
+package lamda.start;
 
 public class Ex01Main {
     public static void helloJava() {

@@ -1,4 +1,4 @@
-package start;
+package lamda;
 
 public interface Procedure {
     void run();
