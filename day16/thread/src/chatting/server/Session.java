@@ -27,11 +27,22 @@ public class Session implements Runnable {
         this.sessionManager.add(this);
     }
 
-    
 
     @Override
     public void run() {
-
+        try {
+            while (true) {
+                String received = input.readUTF();
+                log("client -> server : "+received);
+                commandManager.execute(received,this);
+            }
+        } catch (IOException e) {
+            log(e);
+        } finally {
+            sessionManager.remove(this);
+            sessionManager.sendAll(username+"님이 최장 하였습니다.");
+            close();
+        }
     }
 
     public void close() {
