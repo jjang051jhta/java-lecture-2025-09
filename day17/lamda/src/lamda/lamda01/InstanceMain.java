@@ -19,4 +19,6 @@ public class InstanceMain {
         System.out.println("lamda.class = "+procedure02.getClass());
         System.out.println("lamda.instance = "+procedure02);
     }
+    //함수형 인터페이스 Functional Interface  하나의 추상메서드만 가지는 인터페이스를 말한다.
+    //Single abstract method    sam
 }
