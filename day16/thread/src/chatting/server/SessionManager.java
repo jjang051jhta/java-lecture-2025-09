@@ -1,14 +1,15 @@
 package chatting.server;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+import static utils.MyLogger.log;
 public class SessionManager {
     private List<Session> sessions  = new ArrayList<>();
-    private synchronized void add(Session session) {
+    public synchronized void add(Session session) {
         sessions.add(session);
     }
-    private synchronized void remove(Session session) {
+    public synchronized void remove(Session session) {
         sessions.remove(session);
     }
     public synchronized void closeAll() {
@@ -17,4 +18,14 @@ public class SessionManager {
         }
         sessions.clear();
     }
+    public synchronized void sendAll(String message) {
+        for(Session session: sessions) {
+            try {
+                session.send(message);
+            } catch (IOException e) {
+                log(e);
+            }
+        }
+    }
+    // c  ->   s (session)
 }

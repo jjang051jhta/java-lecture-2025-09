@@ -8,4 +8,5 @@ public class ClientMain {
         Client client = new Client("localhost",PORT);
         client.start();
     }
+    // command pattern  디자인 패턴  자바 코드  comman
 }
