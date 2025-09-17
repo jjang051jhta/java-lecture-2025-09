@@ -61,8 +61,5 @@ public class IntermediateOperationMain {
                 .dropWhile(n -> n < 5) //5보다 작은 동안 건너띄기
                 .forEach(n -> System.out.print(n + " "));
         System.out.println("\n=================================");
-
-
-
     }
 }
