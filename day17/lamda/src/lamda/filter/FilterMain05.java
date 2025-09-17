@@ -13,5 +13,7 @@ public class FilterMain05 {
         //2글자 이상인것만
         List<String> resultStrings = GenericFilter.filter(strings, s -> s.length()>=2);
         System.out.println(resultStrings);
+
+        //Stream
     }
 }
