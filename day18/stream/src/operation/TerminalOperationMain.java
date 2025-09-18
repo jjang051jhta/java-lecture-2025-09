@@ -126,18 +126,5 @@ public class TerminalOperationMain {
         boolean noneMatch = numbers.stream().noneMatch(n -> n < 0);  //병렬로 찾는다
         System.out.println("noneMatch 조건을 전부 충족하느냐 = "+noneMatch);
         System.out.println("\n=============================");
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
 }
