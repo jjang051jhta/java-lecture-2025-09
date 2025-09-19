@@ -12,6 +12,8 @@ public class CarMain01 {
         driver.setCar(sonata);
         driver.drive();
 
+
+
         //운전자의 역할
         //자동차 역할
         //역할과 구현의 분리

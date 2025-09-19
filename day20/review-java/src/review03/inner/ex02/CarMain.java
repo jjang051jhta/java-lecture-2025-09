@@ -1,0 +1,8 @@
+package review03.inner.ex02;
+
+public class CarMain {
+    public static void main(String[] args) {
+        Car car = new Car("아이오닉",1000);
+        car.start();
+    }
+}
